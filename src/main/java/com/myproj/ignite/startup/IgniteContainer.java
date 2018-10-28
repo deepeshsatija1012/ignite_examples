@@ -21,7 +21,7 @@ public class IgniteContainer {
         igniteNodeConfigMap.put(currentNodeName, new IgniteConfigBuilder(this.nodeName));
     }
 
-    public synchronized IgniteConfigBuilder createOrGetIgniteNodeConfiguration(String name) {
+    public synchronized IgniteConfigBuilder createOrGetIgniteTcpCommunicationSpiNodeConfiguration(String name) {
         IgniteConfigBuilder congifBuilder = this.igniteNodeConfigMap.get(name);
         Ignite node = this.igniteNodes.get(name);
         if(node!=null){

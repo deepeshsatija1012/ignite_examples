@@ -67,7 +67,7 @@ public class IgniteStartUpTest {
         Assert.assertTrue(igniteNodeConfigMap.containsKey("testOneServerNode-1"));
         Assert.assertTrue(igniteNodes.containsKey("testOneServerNode-1"));
 
-        container.createOrGetIgniteNodeConfiguration("testOneServerNode-2");
+        container.createOrGetIgniteTcpCommunicationSpiNodeConfiguration("testOneServerNode-2");
         Assert.assertTrue(igniteNodeConfigMap.size()==2);
         Assert.assertTrue(igniteNodes.size()==1);
         Assert.assertTrue(igniteNodeConfigMap.containsKey("testOneServerNode-2"));
